@@ -5,11 +5,11 @@ body {
 }
 
 .container {
-    width: 400px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    min-width: 300px;
 }
 
 h1 {
@@ -19,29 +19,82 @@ h1 {
 
 .form-group {
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
     margin-bottom: 5px;
+    align-self: flex-start;
+    margin-right: 5px;
 }
 
 input {
     width: 100%;
-    padding: 5px;
+    padding: 10px 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    font-size: 16px;
 }
 
 button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
     background-color: #4285F4;
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1, label {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 12px;
+    }
+
+    .form-group {
+        margin-bottom: 5px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
 }
